@@ -1,0 +1,27 @@
+name: AutoMessageBedrock
+main: icrafts\automessagebedrock\AutoMessageBedrock
+version: 1.0.0
+api: 5.0.0
+author: iCrafts
+description: Scheduled configurable broadcasts for PocketMine-MP
+
+commands:
+  automessage:
+    description: AutoMessage main command
+    aliases: [automsg, am]
+    usage: "/am help"
+    permission: automessage.command
+
+permissions:
+  automessage.command:
+    default: true
+  automessage.commands.reload:
+    default: op
+  automessage.commands.list:
+    default: op
+  automessage.commands.send:
+    default: op
+  automessage.receive.regular:
+    default: true
+  automessage.receive.json:
+    default: op

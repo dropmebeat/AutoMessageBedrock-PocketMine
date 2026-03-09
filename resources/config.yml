@@ -1,0 +1,23 @@
+settings:
+  enabled: true
+  min-players: 0
+  log-to-console: false
+
+message-lists:
+  regular:
+    enabled: true
+    random: false
+    interval: 45
+    expiry: -1
+    messages:
+      - "&f[&6iCrafts&f] Наш форум\\n&f&1First&r message"
+      - "&f[&6iCrafts&f] &f&2Second&r message \\nin the default list!"
+      - "&f[&6iCrafts&f] &f&3Third&r message \\nin the default list!"
+      - "&f[&6iCrafts&f] &fThese messages will be displayed to users with \\nautomessage.receive.regular!"
+  json:
+    enabled: true
+    random: false
+    interval: 45
+    expiry: -1
+    messages:
+      - '{"text":"This is json-like message. Bedrock will display plain text.","clickEvent":{"action":"run_command","value":"/say clicked"}}'
