@@ -1,20 +1,37 @@
-AutoMessage is a lightweight, high-performance plugin for Minecraft (PocketMine-MP and Java editions) designed to deliver fully customizable automatic server-wide broadcasts. 
-Key Features
-Automated Broadcasting: Send informative messages or advertisements to all players at set intervals.
-Multiple Display Types: Supports delivery via Chat, ActionBar, Titles, and BossBars.
-Rich Formatting: Full support for standard color codes (§) and advanced styling like MiniMessage or gradients.
-Configurable Intervals: Set dynamic delays between messages in seconds or minutes.
-Randomized Delivery: Option to shuffle messages or display them in a specific sequential order. 
-Common Commands
-/automessage reload: Reloads the config.yml file without restarting the server.
-/automessage list: Displays all current messages in the active broadcast list.
-/automessage add <text>: Adds a new message to the list directly from the game.
-/automessage enable/disable: Toggles the automatic broadcasting system on or off. 
-Example Configuration (config.yml)
-Most versions use a structure similar to this:
-interval: Delay in seconds (e.g., 60 for 1 minute).
-prefix: A tag shown before every message (e.g., [Info]).
-messages: A list of strings to be broadcasted. 
-Bukkit
-Bukkit
- +1
+# AutoMessage
+
+**AutoMessage** is a lightweight and highly customizable plugin for **PocketMine-MP** that allows server administrators to broadcast automated messages to players at specific intervals.
+
+## Features
+
+*   **Custom Intervals:** Set the delay between messages in seconds.
+*   **Message Formatting:** Full support for Minecraft color codes (§).
+*   **Prefix Support:** Add a custom prefix to all automated broadcasts.
+*   **Randomized Mode:** Toggle between sequential or random message delivery.
+*   **Multi-line Messages:** Send complex announcements using `\n` for new lines.
+*   **Zero Lag:** Optimized to run in the background without affecting server performance.
+
+## Commands
+
+
+| Command | Description | Permission |
+|---------|-------------|------------|
+| `/am reload` | Reloads the plugin configuration | `automessage.admin` |
+| `/am list` | Shows all configured messages | `automessage.admin` |
+| `/am toggle` | Enables or disables the broadcaster | `automessage.admin` |
+
+## Configuration
+
+You can easily edit the messages and settings in the `config.yml` file:
+
+```yaml
+# AutoMessage Configuration
+settings:
+  interval: 60 # In seconds
+  random: false
+  prefix: "§l§8[§bINFO§8]§r "
+
+messages:
+  - "Welcome to our server! Type §e/help§f for commands."
+  - "Don't forget to join our Discord: §adiscord.gg/yourlink"
+  - "Support us by visiting our webstore!"
